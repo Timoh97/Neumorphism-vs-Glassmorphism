@@ -1,0 +1,139 @@
+<body>
+    <div class="main">
+        <div class="card" data-tilt data-tilt-speed="5000">
+
+            <img src="https://randomuser.me/api/portraits/men/78.jpg" alt="John Doe">
+            <h2>John Doe</h2>
+            <p>I love playing games and coding</p>
+
+            <div class="social-media">
+                <a href="https://www.facebook.com/">
+                    <i class="fa-brands fa-facebook-square"></i>
+                </a>
+                <a href="https://www.instagram.com/">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/">
+                    <i class="fa-brands fa-twitter-square"></i>
+                </a>
+            </div>
+            <button class="button">Message Me</button>
+        </div>
+    </div>
+</script>
+</body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Architects Daughter', cursive;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://i.pinimg.com/originals/f1/fc/d2/f1fcd246fd9ee074b4a93de3615a3750.jpg");
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 75%;
+  max-width: 360px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 50px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  border-radius: 5%;
+  -webkit-border-radius: 5%;
+  -moz-border-radius: 5%;
+  -ms-border-radius: 5%;
+  -o-border-radius: 5%;
+
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(1, 1, 1, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.card img {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.card h2 {
+  font-size: 3em;
+  font-weight: 600;
+  font-style: bold;
+  margin-top: 25px;
+}
+
+.card p {
+  font-size: 1.5em;
+  margin: 1px auto;
+  max-width: 300px;
+  font-weight: 599;
+  letter-spacing: 1px;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 15px;
+
+  transform: scale(2);
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+}
+
+.social-media i:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+button {
+  margin-top: 15px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.25em;
+  font-weight: 600;
+  outline: none;
+  background-color: rgb(236, 243, 104, 0.25);
+  color: #000000;
+  padding: 10px 25px;
+  
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+button:hover {
+    background-color: rgba(236, 245, 78, 0.9);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+</style>

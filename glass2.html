@@ -1,0 +1,160 @@
+<div class="bubble bubble_one"></div>
+<div class="bubble bubble_two"></div>
+<div class="bubble bubble_three"></div>
+<div class="bubble bubble_four"></div>
+  
+<div class="center_card">
+  <div class="card">
+    <h1>Content</h1>
+    <p>This is just a random paragraph to fill the card so we can see something as a content :D</p>
+    <a href="#">Button</a>
+  </div>
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+body {
+  background-color: #161616;
+  overflow: hidden;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.bubble {
+  @keyframes morph {
+    0% {
+      border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
+    }
+    100% {
+      border-radius: 40% 60%;
+    }
+  }
+  @keyframes spin {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  
+  &::before {
+    content: "";
+    opacity: 25%;
+    position: absolute;
+    z-index: -1;
+    background: linear-gradient(180deg, #3300ff, #5b36ff);
+    animation: morph 15s linear infinite alternate, spin 20s linear infinite;
+    will-change: border-radius, transform;
+  }
+  &::after {
+        animation: morph 10s linear infinite alternate, spin 26s linear infinite reverse;
+    }
+  
+  &_one {
+        &::before {
+            width: 50vmax;
+            height: 50vmax;
+            left: -20vmin;
+            top: -20vmin;
+            transform-origin: 55% 55%;
+        }
+        &::after {
+            width: 50vmin;
+            height: 50vmin;
+            left: auto;
+            top: auto;
+            transform-origin: 20% 20%;
+        }
+    }
+    &_two {
+        &::before {
+            width: 35vmax;
+            height: 35vmax;
+            left: 100vmin;
+            top: 20vmin;
+            transform-origin: 60% 60%;
+        }
+        &::after {
+            width: 35vmin;
+            height: 35vmin;
+            left: auto;
+            top: auto;
+            transform-origin: 65% 65%;
+        }
+    }
+    &_three {
+        &::before {
+            width: 80vmax;
+            height: 80vmax;
+            left: 20vmin;
+            top: 20vmin;
+            transform-origin: 20% 20%;
+        }
+        &::after {
+            width: 80vmin;
+            height: 80vmin;
+            left: auto;
+            top: auto;
+            transform-origin: 25% 25%;
+        }
+    }
+    &_four {
+        &::before {
+            width: 60vmax;
+            height: 60vmax;
+            left: 100vmin;
+            top: 40vmin;
+            transform-origin: 40% 40%;
+        }
+        &::after {
+            width: 60vmin;
+            height: 60vmin;
+            left: auto;
+            top: auto;
+            transform-origin: 45% 45%;
+        }
+    }
+}
+
+.center_card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card {
+  background-color: rgba(21, 21, 21, 0.45);
+  backdrop-filter: blur(15px) saturate(150%);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.100);
+  width: 50vw;
+  height: 50vh;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  h1, p {
+    color: #fafafa;
+  }
+  a {
+    margin-top: 20px;
+    color: #fafafa;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #3300ff;
+    padding: 1em;
+    border-radius: 15px;
+    transition: 1.2s ease-in-out;
+    
+    &:hover {
+      background-color: white;
+      color: #3300ff;
+      transition: 1.2s ease-in-out;
+    }
+  }
+}
+</style>
+<script>
+    
+</script>
